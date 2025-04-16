@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - Premium Tarot</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/theme-elements.css">
+    <link rel="stylesheet" href="admin.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="لوحة تحكم بريميوم تارو">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="btn btn-sm" id="lang-switch" data-current-lang="ar">English</button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/images/logo/logo.svg" alt="Premium Tarot" width="180">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="main-nav">
+                        <ul class="nav-links">
+                            <li><a href="../index.html" class="nav-link" data-lang-key="home">الرئيسية</a></li>
+                            <li><a href="#" class="nav-link active" data-lang-key="admin">لوحة التحكم</a></li>
+                            <li><a href="#" id="logout-btn" class="nav-link" data-lang-key="logout">تسجيل الخروج</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Login Section (shown by default) -->
+    <section id="admin-login" class="admin-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="admin-card">
+                        <h2 class="section-title">تسجيل الدخول للوحة التحكم</h2>
+                        <form id="login-form">
+                            <div class="mb-3">
+                                <label for="github-token" class="form-label">رمز الوصول الشخصي لـ GitHub</label>
+                                <input type="password" class="form-control" id="github-token" required>
+                                <div class="form-text">أدخل رمز الوصول الشخصي لـ GitHub الخاص بك للمصادقة.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard (hidden by default) -->
+    <section id="admin-dashboard" class="admin-section" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Admin Navigation -->
+                    <div class="admin-nav">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-section="orders">
+                                    <i class="fas fa-shopping-cart"></i> إدارة الطلبات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-section="products">
+                                    <i class="fas fa-box"></i> إدارة المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-section="blog">
+                                    <i class="fas fa-blog"></i> إدارة المدونة
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-section="settings">
+                                    <i class="fas fa-cog"></i> الإعدادات
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <!-- Orders Management Section -->
+                    <div id="orders-section" class="admin-content-section">
+                        <h2 class="section-title">إدارة الطلبات</h2>
+                        <div class="admin-filters mb-4">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <select class="form-select" id="order-status-filter">
+                                        <option value="all">جميع الطلبات</option>
+                                        <option value="pending">قيد الانتظار</option>
+                                        <option value="confirmed">تم التأكيد</option>
+                                        <option value="shipped">تم الشحن</option>
+                                        <option value="delivered">تم التسليم</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="order-search" placeholder="بحث بالاسم أو رقم الطلب">
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-primary" id="refresh-orders">
+                                        <i class="fas fa-sync-alt"></i> تحديث
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>رقم الطلب</th>
+                                        <th>اسم العميل</th>
+                                        <th>رقم WhatsApp</th>
+                                        <th>المجموع</th>
+                                        <th>تاريخ الطلب</th>
+                                        <th>الحالة</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orders-table-body">
+                                    <!-- Orders will be loaded here dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Order Details Modal -->
+                    <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="orderDetailsModalLabel">تفاصيل الطلب #<span id="modal-order-id"></span></h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>معلومات العميل</h6>
+                                            <p><strong>الاسم:</strong> <span id="modal-customer-name"></span></p>
+                                            <p><strong>رقم WhatsApp:</strong> <span id="modal-whatsapp"></span></p>
+                                            <p><strong>البريد الإلكتروني:</strong> <span id="modal-email"></span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>معلومات الشحن</h6>
+                                            <p><strong>العنوان:</strong> <span id="modal-address"></span></p>
+                                            <p><strong>المدينة:</strong> <span id="modal-city"></span></p>
+                                            <p><strong>الدولة:</strong> <span id="modal-country"></span></p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h6>المنتجات</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>المنتج</th>
+                                                    <th>السعر</th>
+                                                    <th>الكمية</th>
+                                                    <th>المجموع</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="modal-products">
+                                                <!-- Products will be loaded here dynamically -->
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="3" class="text-end"><strong>المجموع الفرعي:</strong></td>
+                                                    <td id="modal-subtotal"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="text-end"><strong>الشحن:</strong></td>
+                                                    <td id="modal-shipping"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="text-end"><strong>الإجمالي:</strong></td>
+                                                    <td id="modal-total"></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <hr>
+                                    <h6>حالة الطلب</h6>
+                                    <div class="order-status-progress">
+                                        <div class="progress mb-3">
+                                            <div id="modal-progress-bar" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="status-steps">
+                                            <div class="status-step" data-status="pending">
+                                                <div class="status-icon active">
+                                                    <i class="fas fa-clipboard-check"></i>
+                                                </div>
+                                                <div class="status-text">تم الطلب</div>
+                                            </div>
+                                            <div class="status-step" data-status="confirmed">
+                                                <div class="status-icon">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                                <div class="status-text">تم التأكيد</div>
+                                            </div>
+                                            <div class="status-step" data-status="shipped">
+                                                <div class="status-icon">
+                                                    <i class="fas fa-shipping-fast"></i>
+                                                </div>
+                                                <div class="status-text">تم الشحن</div>
+                                            </div>
+                                            <div class="status-step" data-status="delivered">
+                                                <div class="status-icon">
+                                                    <i class="fas fa-box-open"></i>
+                                                </div>
+                                                <div class="status-text">تم التسليم</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                        <label for="update-status" class="form-label">تحديث الحالة</label>
+                                        <select class="form-select" id="update-status">
+                                            <option value="pending">قيد الانتظار</option>
+                                            <option value="confirmed">تم التأكيد</option>
+                                            <option value="shipped">تم الشحن</option>
+                                            <option value="delivered">تم التسليم</option>
+                                        </select>
+                                    </div>
+                                    <div class="mt-3">
+                                        <label for="status-notes" class="form-label">ملاحظات (ستظهر للعميل)</label>
+                                        <textarea class="form-control" id="status-notes" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                                    <button type="button" class="btn btn-primary" id="update-status-btn">تحديث الحالة</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Management Section -->
+                    <div id="products-section" class="admin-content-section" style="display: none;">
+                        <h2 class="section-title">إدارة المنتجات</h2>
+                        <div class="admin-actions mb-4">
+                            <button class="btn btn-primary" id="add-product-btn">
+                                <i class="fas fa-plus"></i> إضافة منتج جديد
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>الصورة</th>
+                                        <th>اسم المنتج</th>
+                                        <th>الفئة</th>
+                                        <th>السعر</th>
+                                        <th>المخزون</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="products-table-body">
+                                    <!-- Products will be loaded here dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Product Form Modal -->
+                    <div class="modal fade" id="productFormModal" tabindex="-1" aria-labelledby="productFormModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productFormModalLabel">إضافة منتج جديد</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="product-form">
+                                        <input type="hidden" id="product-id">
+                                        <div class="mb-3">
+                                            <label for="product-name" class="form-label">اسم المنتج</label>
+                                            <input type="text" class="form-control" id="product-name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="product-category" class="form-label">الفئة</label>
+                                            <select class="form-select" id="product-category" required>
+                                                <option value="tarot-decks">مجموعات تارو</option>
+                                                <option value="oracle-decks">مجموعات أوراكل</option>
+                                                <option value="books">كتب</option>
+                                                <option value="accessories">إكسسوارات</option>
+                                            </select>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="product-price" class="form-label">السعر (ج.م)</label>
+                                                    <input type="number" class="form-control" id="product-price" min="0" step="0.01" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="product-stock" class="form-label">المخزون</label>
+                                                    <input type="number" class="form-control" id="product-stock" min="0" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="product-description" class="form-label">الوصف</label>
+                                            <textarea class="form-control" id="product-description" rows="4" required></textarea>
+                                            <div class="form-text">يمكنك استخدام Markdown لتنسيق النص.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="product-image" class="form-label">صورة المنتج</label>
+                                            <input type="file" class="form-control" id="product-image" accept="image/*">
+                                            <div class="form-text">الحد الأقصى لحجم الملف: 2 ميجابايت. الأبعاد الموصى بها: 800×800 بكسل.</div>
+                                        </div>
+                                        <div id="product-image-preview" class="mb-3" style="display: none;">
+                                            <img src="https://via.placeholder.com/800x800.png?text=Product+Preview" alt="معاينة صورة المنتج" class="img-thumbnail" style="max-height: 200px;">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                                    <button type="button" class="btn btn-primary" id="save-product-btn">حفظ المنتج</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Management Section -->
+                    <div id="blog-section" class="admin-content-section" style="display: none;">
+                        <h2 class="section-title">إدارة المدونة</h2>
+                        <div class="admin-actions mb-4">
+                            <button class="btn btn-primary" id="add-post-btn">
+                                <i class="fas fa-plus"></i> إضافة منشور جديد
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>الصورة</th>
+                                        <th>العنوان</th>
+                                        <th>تاريخ النشر</th>
+                                        <th>الإعجابات</th>
+                                        <th>التعليقات</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="blog-table-body">
+                                    <!-- Blog posts will be loaded here dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Form Modal -->
+                    <div class="modal fade" id="blogFormModal" tabindex="-1" aria-labelledby="blogFormModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="blogFormModalLabel">إضافة منشور جديد</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="blog-form">
+                                        <input type="hidden" id="post-id">
+                                        <div class="mb-3">
+                                            <label for="post-title" class="form-label">عنوان المنشور</label>
+                                            <input type="text" class="form-control" id="post-title" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="post-content" class="form-label">محتوى المنشور</label>
+                                            <textarea class="form-control" id="post-content" rows="10" required></textarea>
+                                            <div class="form-text">يمكنك استخدام Markdown لتنسيق النص.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="post-image" class="form-label">صورة المنشور</label>
+                                            <input type="file" class="form-control" id="post-image" accept="image/*">
+                                            <div class="form-text">الحد الأقصى لحجم الملف: 2 ميجابايت. الأبعاد الموصى بها: 1200×800 بكسل.</div>
+                                        </div>
+                                        <div id="post-image-preview" class="mb-3" style="display: none;">
+                                            <img src="https://via.placeholder.com/1200x800.png?text=Post+Preview" alt="معاينة صورة المنشور" class="img-thumbnail" style="max-height: 200px;">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                                    <button type="button" class="btn btn-primary" id="save-post-btn">نشر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Section -->
+                    <div id="settings-section" class="admin-content-section" style="display: none;">
+                        <h2 class="section-title">إعدادات الموقع</h2>
+                        <form id="settings-form">
+                            <div class="mb-4">
+                                <h4>معلومات الاتصال</h4>
+                                <div class="mb-3">
+                                    <label for="whatsapp-number" class="form-label">رقم WhatsApp</label>
+                                    <input type="text" class="form-control" id="whatsapp-number">
+                                    <div class="form-text">أدخل رقم WhatsApp الخاص بك بالتنسيق الدولي (مثال: 201234567890)</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="facebook-url" class="form-label">رابط Facebook</label>
+                                    <input type="url" class="form-control" id="facebook-url">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h4>إعدادات الشحن</h4>
+                                <div class="mb-3">
+                                    <label for="free-shipping-threshold" class="form-label">الحد الأدنى للشحن المجاني (ج.م)</label>
+                                    <input type="number" class="form-control" id="free-shipping-threshold" min="0">
+                                    <div class="form-text">الطلبات التي تتجاوز هذا المبلغ ستحصل على شحن مجاني</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="shipping-cost" class="form-label">تكلفة الشحن الافتراضية (ج.م)</label>
+                                    <input type="number" class="form-control" id="shipping-cost" min="0">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">حفظ الإعدادات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 data-lang-key="about-us">عن بريميوم تارو</h3>
+                    <p data-lang-key="about-description">نقدم منتجات تارو عالية الجودة وكتب روحانية لمساعدتك في رحلتك الروحانية.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="quick-links">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" data-lang-key="home">الرئيسية</a></li>
+                        <li><a href="../pages/products.html" data-lang-key="products">المنتجات</a></li>
+                        <li><a href="../pages/blog.html" data-lang-key="blog">المدونة</a></li>
+                        <li><a href="../pages/contact.html" data-lang-key="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="contact-us">اتصل بنا</h3>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/201005684094" target="_blank">WhatsApp</a></p>
+                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/premiumtarot" target="_blank">Facebook</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Premium Tarot. <span data-lang-key="all-rights-reserved">جميع الحقوق محفوظة</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

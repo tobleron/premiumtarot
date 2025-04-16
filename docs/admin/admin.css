@@ -1,0 +1,220 @@
+/* Admin Panel Styles */
+
+:root {
+    --admin-primary: #990000;
+    --admin-secondary: #333333;
+    --admin-light: #f8f8f8;
+    --admin-border: #e0e0e0;
+    --status-pending: #ffc107;
+    --status-confirmed: #17a2b8;
+    --status-shipped: #6f42c1;
+    --status-delivered: #28a745;
+}
+
+/* Admin Card Styles */
+.admin-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Admin Navigation */
+.admin-nav {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+.admin-nav .nav-link {
+    color: var(--admin-secondary);
+    padding: 1rem 1.5rem;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.admin-nav .nav-link:hover {
+    background-color: var(--admin-light);
+    color: var(--admin-primary);
+}
+
+.admin-nav .nav-link.active {
+    color: var(--admin-primary);
+    border-left-color: var(--admin-primary);
+    background-color: var(--admin-light);
+    font-weight: 500;
+}
+
+.admin-nav .nav-link i {
+    margin-left: 0.5rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Admin Content Section */
+.admin-content-section {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Admin Actions */
+.admin-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Admin Filters */
+.admin-filters {
+    margin-bottom: 1.5rem;
+}
+
+/* Tables */
+.table th {
+    font-weight: 600;
+    color: var(--admin-secondary);
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.pending {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #856404;
+}
+
+.status-badge.confirmed {
+    background-color: rgba(23, 162, 184, 0.2);
+    color: #0c5460;
+}
+
+.status-badge.shipped {
+    background-color: rgba(111, 66, 193, 0.2);
+    color: #6f42c1;
+}
+
+.status-badge.delivered {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #155724;
+}
+
+/* Order Status Progress */
+.order-status-progress {
+    margin: 2rem 0;
+}
+
+.status-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.status-step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.status-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--admin-light);
+    color: var(--admin-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    border: 2px solid var(--admin-border);
+    transition: all 0.3s ease;
+}
+
+.status-icon.active {
+    background-color: var(--admin-primary);
+    color: white;
+    border-color: var(--admin-primary);
+}
+
+.status-text {
+    font-size: 0.875rem;
+    color: var(--admin-secondary);
+}
+
+/* Image Previews */
+.product-image-small {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.blog-image-small {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+/* Action Buttons */
+.action-btn {
+    background: none;
+    border: none;
+    color: var(--admin-secondary);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.action-btn:hover {
+    color: var(--admin-primary);
+}
+
+.action-btn.edit {
+    color: #17a2b8;
+}
+
+.action-btn.delete {
+    color: #dc3545;
+}
+
+.action-btn.view {
+    color: #6f42c1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .admin-nav {
+        margin-bottom: 1rem;
+    }
+    
+    .admin-nav .nav-link {
+        padding: 0.75rem 1rem;
+    }
+    
+    .admin-content-section {
+        padding: 1.5rem;
+    }
+    
+    .status-steps {
+        flex-wrap: wrap;
+    }
+    
+    .status-step {
+        flex: 0 0 50%;
+        margin-bottom: 1rem;
+    }
+}
