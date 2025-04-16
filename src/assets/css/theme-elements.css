@@ -1,0 +1,252 @@
+/* Additional styles for tarot-themed elements */
+.tarot-card {
+  position: relative;
+  perspective: 1000px;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 2rem;
+}
+
+.tarot-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.tarot-card:hover .tarot-card-inner {
+  transform: rotateY(180deg);
+}
+
+.tarot-card-front, .tarot-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.tarot-card-front {
+  background-color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+}
+
+.tarot-card-back {
+  background-color: var(--primary-color);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.tarot-card-back p {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Decorative elements */
+.decorative-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.decorative-line {
+  height: 1px;
+  background-color: var(--medium-gray);
+  flex-grow: 1;
+}
+
+.decorative-symbol {
+  margin: 0 1rem;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+/* Hero section enhancements */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(153, 0, 0, 0.05) 0%, rgba(153, 0, 0, 0.1) 100%);
+  z-index: 1;
+}
+
+/* Elegant button styles */
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Product badge */
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 10;
+}
+
+/* Animated elements */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Testimonials section */
+.testimonial-card {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 4rem;
+  color: rgba(153, 0, 0, 0.1);
+  font-family: var(--font-primary);
+  line-height: 1;
+}
+
+.testimonial-content {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  margin-right: 1rem;
+}
+
+.testimonial-author-name {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.testimonial-author-title {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+/* Newsletter section */
+.newsletter-section {
+  background-color: var(--light-gray);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.newsletter-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-input-group {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.newsletter-input {
+  flex-grow: 1;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-family: var(--font-secondary);
+}
+
+.newsletter-button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.newsletter-button:hover {
+  background-color: #800000;
+}
+
+/* RTL adjustments for new elements */
+[dir="rtl"] .testimonial-card::before {
+  left: auto;
+  right: 1.5rem;
+}
+
+[dir="rtl"] .testimonial-author-image {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+[dir="rtl"] .product-badge {
+  right: auto;
+  left: 1rem;
+}
+
+[dir="rtl"] .newsletter-input {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+[dir="rtl"] .newsletter-button {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}

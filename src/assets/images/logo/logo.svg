@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <style>
+    .logo-text { font-family: 'Playfair Display', serif; font-weight: 700; }
+    .primary { fill: #990000; }
+    .secondary { fill: #000000; }
+  </style>
+  <text x="10" y="40" class="logo-text primary" font-size="28">Premium Tarot</text>
+  <path class="primary" d="M8,10 L12,5 L16,10 L12,15 Z" />
+  <path class="primary" d="M184,10 L188,5 L192,10 L188,15 Z" />
+</svg>

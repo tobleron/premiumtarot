@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدونة - Premium Tarot</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <meta name="description" content="مدونة بريميوم تارو - مقالات عن التارو والروحانية">
+    <meta name="keywords" content="tarot, premium, spiritual, تارو, روحانية, بريميوم, مدونة">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="btn btn-sm" id="lang-switch" data-current-lang="ar">English</button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1>Premium Tarot</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="main-nav">
+                        <ul class="nav-links">
+                            <li><a href="../index.html" class="nav-link" data-lang-key="home">الرئيسية</a></li>
+                            <li><a href="products.html" class="nav-link" data-lang-key="products">المنتجات</a></li>
+                            <li><a href="offers.html" class="nav-link" data-lang-key="offers">العروض</a></li>
+                            <li><a href="blog.html" class="nav-link active" data-lang-key="blog">المدونة</a></li>
+                            <li><a href="contact.html" class="nav-link" data-lang-key="contact">اتصل بنا</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1 class="section-title" data-lang-key="blog">المدونة</h1>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="category-filter active" data-category="all" data-lang-key="all-categories">جميع المواضيع</button>
+                <button class="category-filter" data-category="tarot" data-lang-key="tarot">التارو</button>
+                <button class="category-filter" data-category="spirituality" data-lang-key="spirituality">الروحانية</button>
+                <button class="category-filter" data-category="guides" data-lang-key="guides">أدلة وشروحات</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="row">
+                <!-- Blog Post 1 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="tarot">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="blog-details">
+                            <h3 class="blog-title">أساسيات قراءة التارو</h3>
+                            <p class="blog-excerpt">تعلم أساسيات قراءة بطاقات التارو للمبتدئين. في هذا المقال، سنتناول المفاهيم الأساسية وكيفية البدء في رحلتك مع التارو...</p>
+                            <a href="blog-post.html?id=1" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                            <div class="blog-meta">
+                                <span class="blog-date">١٥ أبريل ٢٠٢٥</span>
+                                <span class="blog-likes"><i class="far fa-heart"></i> ٢٤</span>
+                                <span class="blog-comments"><i class="far fa-comment"></i> ١٢</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="tarot">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="blog-details">
+                            <h3 class="blog-title">رموز التارو وتفسيراتها</h3>
+                            <p class="blog-excerpt">دليل شامل لفهم رموز بطاقات التارو ومعانيها. سنستكشف الرموز الشائعة في بطاقات التارو وكيفية تفسيرها في القراءات...</p>
+                            <a href="blog-post.html?id=2" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                            <div class="blog-meta">
+                                <span class="blog-date">١٠ أبريل ٢٠٢٥</span>
+                                <span class="blog-likes"><i class="far fa-heart"></i> ١٨</span>
+                                <span class="blog-comments"><i class="far fa-comment"></i> ٨</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="spirituality">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="blog-details">
+                            <h3 class="blog-title">الروحانية في الحياة اليومية</h3>
+                            <p class="blog-excerpt">كيفية دمج الممارسات الروحانية في حياتك اليومية. نقدم نصائح عملية لتعزيز الوعي الروحاني وتحسين جودة الحياة...</p>
+                            <a href="blog-post.html?id=3" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                            <div class="blog-meta">
+                                <span class="blog-date">٥ أبريل ٢٠٢٥</span>
+                                <span class="blog-likes"><i class="far fa-heart"></i> ٣٠</span>
+                                <span class="blog-comments"><i class="far fa-comment"></i> ١٥</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 4 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="guides">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="blog-details">
+                            <h3 class="blog-title">كيفية اختيار مجموعة التارو المناسبة لك</h3>
+                            <p class="blog-excerpt">دليل لاختيار مجموعة بطاقات التارو التي تناسب احتياجاتك وأسلوبك. نستعرض أنواع مختلفة من مجموعات التارو ومميزاتها...</p>
+                            <a href="blog-post.html?id=4" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                            <div class="blog-meta">
+                                <span class="blog-date">١ أبريل ٢٠٢٥</span>
+                                <span class="blog-likes"><i class="far fa-heart"></i> ١٥</span>
+                                <span class="blog-comments"><i class="far fa-comment"></i> ٧</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 5 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="spirituality">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="blog-details">
+                            <h3 class="blog-title">تأثير القمر على الطاقة الروحانية</h3>
+                            <p class="blog-excerpt">استكشاف العلاقة بين دورات القمر والطاقة الروحانية. كيف يمكن الاستفادة من مراحل القمر المختلفة في الممارسات الروحانية...</p>
+                            <a href="blog-post.html?id=5" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                            <div class="blog-meta">
+                                <span class="blog-date">٢٥ مارس ٢٠٢٥</span>
+                                <span class="blog-likes"><i class="far fa-heart"></i> ٢٢</span>
+                                <span class="blog-comments"><i class="far fa-comment"></i> ١٠</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 6 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="guides">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="blog-details">
+                            <h3 class="blog-title">طرق تنظيف وشحن بطاقات التارو</h3>
+                            <p class="blog-excerpt">دليل شامل لتنظيف وشحن بطاقات التارو للحفاظ على طاقتها. نقدم طرقًا مختلفة للعناية ببطاقات التارو وتحسين فعاليتها...</p>
+                            <a href="blog-post.html?id=6" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                            <div class="blog-meta">
+                                <span class="blog-date">٢٠ مارس ٢٠٢٥</span>
+                                <span class="blog-likes"><i class="far fa-heart"></i> ١٩</span>
+                                <span class="blog-comments"><i class="far fa-comment"></i> ٩</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Preview -->
+    <div class="cart-preview" id="cart-preview">
+        <div class="cart-header">
+            <h3 data-lang-key="shopping-cart">سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <p class="empty-cart-message" data-lang-key="empty-cart">سلة التسوق فارغة</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-lang-key="total">المجموع:</span>
+                <span class="total-amount">٠ ج.م</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" data-lang-key="checkout">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 data-lang-key="about-us">عن بريميوم تارو</h3>
+                    <p data-lang-key="about-description">نقدم منتجات تارو عالية الجودة وكتب روحانية لمساعدتك في رحلتك الروحانية.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="quick-links">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" data-lang-key="home">الرئيسية</a></li>
+                        <li><a href="products.html" data-lang-key="products">المنتجات</a></li>
+                        <li><a href="blog.html" data-lang-key="blog">المدونة</a></li>
+                        <li><a href="contact.html" data-lang-key="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="contact-us">اتصل بنا</h3>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">WhatsApp</a></p>
+                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/premiumtarot" target="_blank">Facebook</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Premium Tarot. <span data-lang-key="all-rights-reserved">جميع الحقوق محفوظة</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/marked/marked.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/interactive.js"></script>
+</body>
+</html>

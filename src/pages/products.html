@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - Premium Tarot</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <meta name="description" content="تسوق منتجات تارو عالية الجودة وكتب روحانية من بريميوم تارو">
+    <meta name="keywords" content="tarot, premium, spiritual, تارو, روحانية, بريميوم, منتجات">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="btn btn-sm" id="lang-switch" data-current-lang="ar">English</button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1>Premium Tarot</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="main-nav">
+                        <ul class="nav-links">
+                            <li><a href="../index.html" class="nav-link" data-lang-key="home">الرئيسية</a></li>
+                            <li><a href="products.html" class="nav-link active" data-lang-key="products">المنتجات</a></li>
+                            <li><a href="offers.html" class="nav-link" data-lang-key="offers">العروض</a></li>
+                            <li><a href="blog.html" class="nav-link" data-lang-key="blog">المدونة</a></li>
+                            <li><a href="contact.html" class="nav-link" data-lang-key="contact">اتصل بنا</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1 class="section-title" data-lang-key="products">المنتجات</h1>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="category-filter active" data-category="all" data-lang-key="all-categories">جميع الفئات</button>
+                <button class="category-filter" data-category="tarot-cards" data-lang-key="tarot-cards">بطاقات تارو</button>
+                <button class="category-filter" data-category="books" data-lang-key="books">كتب</button>
+                <button class="category-filter" data-category="candles" data-lang-key="candles">شموع</button>
+                <button class="category-filter" data-category="accessories" data-lang-key="accessories">إكسسوارات</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid">
+        <div class="container">
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="tarot-cards">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">بطاقات تارو كلاسيكية</h3>
+                            <p class="product-price">٢٥٠ ج.م</p>
+                            <button class="btn btn-primary add-to-cart" data-lang-key="add-to-cart">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="books">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">كتاب أسرار التارو</h3>
+                            <p class="product-price">١٥٠ ج.م</p>
+                            <button class="btn btn-primary add-to-cart" data-lang-key="add-to-cart">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="candles">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">شموع طقوس خاصة</h3>
+                            <p class="product-price">١٠٠ ج.م</p>
+                            <button class="btn btn-primary add-to-cart" data-lang-key="add-to-cart">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="accessories">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">قماش قراءة التارو</h3>
+                            <p class="product-price">١٢٠ ج.م</p>
+                            <button class="btn btn-primary add-to-cart" data-lang-key="add-to-cart">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="tarot-cards">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">بطاقات تارو مصرية</h3>
+                            <p class="product-price">٣٠٠ ج.م</p>
+                            <button class="btn btn-primary add-to-cart" data-lang-key="add-to-cart">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="books">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">كتاب الروحانية اليومية</h3>
+                            <p class="product-price">١٨٠ ج.م</p>
+                            <button class="btn btn-primary add-to-cart" data-lang-key="add-to-cart">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="candles">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">مجموعة شموع العناصر</h3>
+                            <p class="product-price">٢٠٠ ج.م</p>
+                            <button class="btn btn-primary add-to-cart" data-lang-key="add-to-cart">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="accessories">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">صندوق خشبي للتارو</h3>
+                            <p class="product-price">٢٥٠ ج.م</p>
+                            <button class="btn btn-primary add-to-cart" data-lang-key="add-to-cart">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Preview -->
+    <div class="cart-preview" id="cart-preview">
+        <div class="cart-header">
+            <h3 data-lang-key="shopping-cart">سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <p class="empty-cart-message" data-lang-key="empty-cart">سلة التسوق فارغة</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-lang-key="total">المجموع:</span>
+                <span class="total-amount">٠ ج.م</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" data-lang-key="checkout">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 data-lang-key="about-us">عن بريميوم تارو</h3>
+                    <p data-lang-key="about-description">نقدم منتجات تارو عالية الجودة وكتب روحانية لمساعدتك في رحلتك الروحانية.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="quick-links">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" data-lang-key="home">الرئيسية</a></li>
+                        <li><a href="products.html" data-lang-key="products">المنتجات</a></li>
+                        <li><a href="blog.html" data-lang-key="blog">المدونة</a></li>
+                        <li><a href="contact.html" data-lang-key="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="contact-us">اتصل بنا</h3>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">WhatsApp</a></p>
+                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/premiumtarot" target="_blank">Facebook</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Premium Tarot. <span data-lang-key="all-rights-reserved">جميع الحقوق محفوظة</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/marked/marked.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/interactive.js"></script>
+</body>
+</html>

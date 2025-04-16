@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - Premium Tarot</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <meta name="description" content="تواصل مع بريميوم تارو - استفسارات، طلبات خاصة، ودعم العملاء">
+    <meta name="keywords" content="tarot, premium, contact, تارو, بريميوم, اتصل بنا">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="btn btn-sm" id="lang-switch" data-current-lang="ar">English</button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1>Premium Tarot</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="main-nav">
+                        <ul class="nav-links">
+                            <li><a href="../index.html" class="nav-link" data-lang-key="home">الرئيسية</a></li>
+                            <li><a href="products.html" class="nav-link" data-lang-key="products">المنتجات</a></li>
+                            <li><a href="offers.html" class="nav-link" data-lang-key="offers">العروض</a></li>
+                            <li><a href="blog.html" class="nav-link" data-lang-key="blog">المدونة</a></li>
+                            <li><a href="contact.html" class="nav-link active" data-lang-key="contact">اتصل بنا</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1 class="section-title" data-lang-key="contact-us">اتصل بنا</h1>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-card">
+                        <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+                        <p>تواصل معنا مباشرة عبر WhatsApp للاستفسارات والطلبات:</p>
+                        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> تواصل عبر WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-card">
+                        <h3><i class="fab fa-facebook"></i> Facebook</h3>
+                        <p>تابعنا على صفحة الفيسبوك للحصول على آخر الأخبار والعروض:</p>
+                        <a href="https://www.facebook.com/premiumtarot" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-facebook"></i> Premium Tarot على Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <div class="container">
+            <h2 class="section-title">أرسل لنا رسالة</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">الاسم</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="whatsapp" class="form-label">رقم WhatsApp</label>
+                            <input type="text" class="form-control" id="whatsapp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">الموضوع</label>
+                            <select class="form-select" id="subject" required>
+                                <option value="" selected disabled>اختر الموضوع</option>
+                                <option value="inquiry">استفسار عام</option>
+                                <option value="order">استفسار عن طلب</option>
+                                <option value="bulk">طلب بكميات كبيرة</option>
+                                <option value="other">موضوع آخر</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">الرسالة</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">الأسئلة الشائعة</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            كيف يمكنني الدفع؟
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            يتم الدفع عبر تحويل مباشر من خلال WhatsApp أو الدفع عند الاستلام. بعد إتمام عملية الشراء، سنتواصل معك عبر WhatsApp لتأكيد الطلب وترتيب طريقة الدفع المناسبة.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ما هي مدة التوصيل؟
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            مدة التوصيل داخل مصر من 3-5 أيام عمل. للشحن الدولي، تختلف المدة حسب البلد المستهدف وسيتم إعلامك بالتفاصيل عند تأكيد الطلب.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            هل يمكنني تتبع طلبي؟
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            نعم، بعد تأكيد الطلب ستتمكن من تتبع حالة طلبك من خلال حسابك على الموقع. كما سنقوم بإرسال تحديثات عبر WhatsApp عند تأكيد الطلب وشحنه واستلامه.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            هل يمكنني إلغاء طلبي؟
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            يمكن إلغاء الطلب قبل شحنه. يرجى التواصل معنا عبر WhatsApp في أقرب وقت ممكن إذا كنت ترغب في إلغاء طلبك.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Preview -->
+    <div class="cart-preview" id="cart-preview">
+        <div class="cart-header">
+            <h3 data-lang-key="shopping-cart">سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <p class="empty-cart-message" data-lang-key="empty-cart">سلة التسوق فارغة</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-lang-key="total">المجموع:</span>
+                <span class="total-amount">٠ ج.م</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" data-lang-key="checkout">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 data-lang-key="about-us">عن بريميوم تارو</h3>
+                    <p data-lang-key="about-description">نقدم منتجات تارو عالية الجودة وكتب روحانية لمساعدتك في رحلتك الروحانية.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="quick-links">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" data-lang-key="home">الرئيسية</a></li>
+                        <li><a href="products.html" data-lang-key="products">المنتجات</a></li>
+                        <li><a href="blog.html" data-lang-key="blog">المدونة</a></li>
+                        <li><a href="contact.html" data-lang-key="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="contact-us">اتصل بنا</h3>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">WhatsApp</a></p>
+                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/premiumtarot" target="_blank">Facebook</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Premium Tarot. <span data-lang-key="all-rights-reserved">جميع الحقوق محفوظة</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/marked/marked.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Contact form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const whatsapp = document.getElementById('whatsapp').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Prepare message for WhatsApp
+                    let whatsappMessage = `رسالة جديدة من ${name}:\n\n`;
+                    whatsappMessage += `الموضوع: ${document.getElementById('subject').options[document.getElementById('subject').selectedIndex].text}\n\n`;
+                    whatsappMessage += `${message}\n\n`;
+                    whatsappMessage += `رقم WhatsApp للتواصل: ${whatsapp}`;
+                    
+                    // Encode message for WhatsApp URL
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    
+                    // Open WhatsApp with the message
+                    window.open(`https://wa.me/YOUR_WHATSAPP_NUMBER?text=${encodedMessage}`, '_blank');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Show success message
+                    alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريبًا.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

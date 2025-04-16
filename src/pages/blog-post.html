@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عنوان المقال - Premium Tarot</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <meta name="description" content="مقال من مدونة بريميوم تارو">
+    <meta name="keywords" content="tarot, premium, spiritual, تارو, روحانية, بريميوم, مدونة">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="btn btn-sm" id="lang-switch" data-current-lang="ar">English</button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1>Premium Tarot</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="main-nav">
+                        <ul class="nav-links">
+                            <li><a href="../index.html" class="nav-link" data-lang-key="home">الرئيسية</a></li>
+                            <li><a href="products.html" class="nav-link" data-lang-key="products">المنتجات</a></li>
+                            <li><a href="offers.html" class="nav-link" data-lang-key="offers">العروض</a></li>
+                            <li><a href="blog.html" class="nav-link active" data-lang-key="blog">المدونة</a></li>
+                            <li><a href="contact.html" class="nav-link" data-lang-key="contact">اتصل بنا</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Post Content -->
+    <section class="blog-post-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <article class="blog-post">
+                        <div class="blog-post-header">
+                            <h1 class="blog-post-title" id="post-title">عنوان المقال</h1>
+                            <div class="blog-post-meta">
+                                <span class="blog-post-date" id="post-date">١٥ أبريل ٢٠٢٥</span>
+                                <span class="blog-post-category" id="post-category">التارو</span>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-post-featured-image">
+                            <div class="placeholder-image" id="post-image"></div>
+                        </div>
+                        
+                        <div class="blog-post-body" id="post-content">
+                            <!-- Content will be loaded dynamically with markdown support -->
+                            <p>محتوى المقال سيظهر هنا...</p>
+                        </div>
+                        
+                        <div class="blog-post-actions">
+                            <button class="btn like-button" id="like-button">
+                                <i class="far fa-heart"></i> <span id="like-count">0</span>
+                            </button>
+                            <button class="btn share-button" id="share-button">
+                                <i class="fas fa-share-alt"></i> مشاركة
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Comments Section -->
+                    <div class="comments-section">
+                        <h3>التعليقات (<span id="comment-count">0</span>)</h3>
+                        
+                        <div class="comment-form">
+                            <h4>أضف تعليقًا</h4>
+                            <form id="comment-form">
+                                <div class="mb-3">
+                                    <label for="commenter-name" class="form-label">الاسم</label>
+                                    <input type="text" class="form-control" id="commenter-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comment-text" class="form-label">التعليق</label>
+                                    <textarea class="form-control" id="comment-text" rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">إرسال التعليق</button>
+                            </form>
+                        </div>
+                        
+                        <div class="comments-list" id="comments-list">
+                            <!-- Comments will be loaded dynamically -->
+                            <p class="no-comments-message">لا توجد تعليقات حتى الآن. كن أول من يعلق!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Posts -->
+                    <div class="related-posts">
+                        <h3>مقالات ذات صلة</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="blog-card">
+                                    <div class="blog-image">
+                                        <div class="placeholder-image"></div>
+                                    </div>
+                                    <div class="blog-details">
+                                        <h4 class="blog-title">رموز التارو وتفسيراتها</h4>
+                                        <a href="blog-post.html?id=2" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="blog-card">
+                                    <div class="blog-image">
+                                        <div class="placeholder-image"></div>
+                                    </div>
+                                    <div class="blog-details">
+                                        <h4 class="blog-title">الروحانية في الحياة اليومية</h4>
+                                        <a href="blog-post.html?id=3" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="blog-card">
+                                    <div class="blog-image">
+                                        <div class="placeholder-image"></div>
+                                    </div>
+                                    <div class="blog-details">
+                                        <h4 class="blog-title">كيفية اختيار مجموعة التارو المناسبة لك</h4>
+                                        <a href="blog-post.html?id=4" class="read-more" data-lang-key="read-more">اقرأ المزيد</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+                        <div class="sidebar-widget categories-widget">
+                            <h3>التصنيفات</h3>
+                            <ul class="categories-list">
+                                <li><a href="blog.html?category=tarot">التارو</a></li>
+                                <li><a href="blog.html?category=spirituality">الروحانية</a></li>
+                                <li><a href="blog.html?category=guides">أدلة وشروحات</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sidebar-widget recent-posts-widget">
+                            <h3>أحدث المقالات</h3>
+                            <ul class="recent-posts-list">
+                                <li>
+                                    <a href="blog-post.html?id=1">أساسيات قراءة التارو</a>
+                                    <span class="post-date">١٥ أبريل ٢٠٢٥</span>
+                                </li>
+                                <li>
+                                    <a href="blog-post.html?id=2">رموز التارو وتفسيراتها</a>
+                                    <span class="post-date">١٠ أبريل ٢٠٢٥</span>
+                                </li>
+                                <li>
+                                    <a href="blog-post.html?id=3">الروحانية في الحياة اليومية</a>
+                                    <span class="post-date">٥ أبريل ٢٠٢٥</span>
+                                </li>
+                                <li>
+                                    <a href="blog-post.html?id=4">كيفية اختيار مجموعة التارو المناسبة لك</a>
+                                    <span class="post-date">١ أبريل ٢٠٢٥</span>
+                                </li>
+                                <li>
+                                    <a href="blog-post.html?id=5">تأثير القمر على الطاقة الروحانية</a>
+                                    <span class="post-date">٢٥ مارس ٢٠٢٥</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Preview -->
+    <div class="cart-preview" id="cart-preview">
+        <div class="cart-header">
+            <h3 data-lang-key="shopping-cart">سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <p class="empty-cart-message" data-lang-key="empty-cart">سلة التسوق فارغة</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-lang-key="total">المجموع:</span>
+                <span class="total-amount">٠ ج.م</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" data-lang-key="checkout">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 data-lang-key="about-us">عن بريميوم تارو</h3>
+                    <p data-lang-key="about-description">نقدم منتجات تارو عالية الجودة وكتب روحانية لمساعدتك في رحلتك الروحانية.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="quick-links">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" data-lang-key="home">الرئيسية</a></li>
+                        <li><a href="products.html" data-lang-key="products">المنتجات</a></li>
+                        <li><a href="blog.html" data-lang-key="blog">المدونة</a></li>
+                        <li><a href="contact.html" data-lang-key="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="contact-us">اتصل بنا</h3>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">WhatsApp</a></p>
+                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/premiumtarot" target="_blank">Facebook</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Premium Tarot. <span data-lang-key="all-rights-reserved">جميع الحقوق محفوظة</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/marked/marked.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Blog post functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get post ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id') || '1'; // Default to first post if no ID
+            
+            // Sample blog posts data (in a real implementation, this would be fetched from a server)
+            const blogPosts = {
+                '1': {
+                    title: 'أساسيات قراءة التارو',
+                    date: '١٥ أبريل ٢٠٢٥',
+                    category: 'التارو',
+                    likes: 24,
+                    content: `
+# أساسيات قراءة التارو للمبتدئين
+
+تعتبر قراءة بطاقات التارو فنًا قديمًا يساعد في استكشاف الذات والحصول على رؤى حول الحياة. في هذا المقال، سنتناول المفاهيم الأساسية وكيفية البدء في رحلتك مع التارو.
+
+## ما هو التارو؟
+
+التارو هو مجموعة من 78 بطاقة مقسمة إلى قسمين رئيسيين:
+- **الأركانا الكبرى**: 22 بطاقة تمثل دروسًا ومراحل كبرى في الحياة.
+- **الأركانا الصغرى**: 56 بطاقة مقسمة إلى أربعة أنواع (العصي، الكؤوس، السيوف، والدنانير).
+
+## كيفية اختيار مجموعة التارو الأولى
+
+عند اختيار مجموعة التارو الأولى، يُنصح بالبحث عن مجموعة تشعر بارتباط شخصي معها. يمكن أن تكون المجموعة الكلاسيكية "رايدر-ويت" خيارًا جيدًا للمبتدئين نظرًا لوضوح رموزها وتوفر الموارد التعليمية حولها.
+
+## خطوات أساسية لقراءة التارو
+
+1. **تنظيف وشحن البطاقات**: قبل استخدام مجموعة جديدة، يُفضل تنظيفها وشحنها بالطاقة الإيجابية.
+2. **التواصل مع البطاقات**: قضاء وقت في التعرف على كل بطاقة ومعناها.
+3. **تحديد السؤال**: وضع سؤال واضح ومحدد قبل بدء القراءة.
+4. **خلط البطاقات**: خلط البطاقات مع التركيز على السؤال.
+5. **اختيار التصميم**: اختيار تصميم مناسب لنوع القراءة (مثل تصميم الثلاث بطاقات للمبتدئين).
+6. **تفسير البطاقات**: قراءة معاني البطاقات وربطها بالسؤال والسياق.
+
+## تصميم الثلاث بطاقات للمبتدئين
+
+يعتبر تصميم الثلاث بطاقات من أبسط التصاميم وأكثرها فعالية للمبتدئين:
+- **البطاقة الأولى**: تمثل الماضي أو السبب.
+- **البطاقة الثانية**: تمثل الحاضر أو الوضع الحالي.
+- **البطاقة الثالثة**: تمثل المستقبل أو النتيجة المحتملة.
+
+## نصائح للمبتدئين
+
+- ابدأ بتعلم معاني البطاقات الأساسية قبل الاعتماد على الحدس.
+- احتفظ بمذكرة لتسجيل قراءاتك وتتبع دقتها مع مرور الوقت.
+- تذكر أن التارو أداة للتأمل والاستبصار، وليس للتنبؤ بالمستقبل بشكل قطعي.
+- مارس القراءة بانتظام لتطوير مهاراتك.
+
+## خاتمة
+
+قراءة التارو رحلة شخصية للنمو والاستكشاف الذاتي. مع الممارسة والصبر، ستتطور قدرتك على فهم رموز البطاقات وتفسيرها بشكل أعمق. استمتع برحلتك مع التارو واستخدمه كأداة للتأمل والتوجيه في حياتك.
+                    `
+                },
+                '2': {
+                    title: 'رموز التارو وتفسيراتها',
+                    date: '١٠ أبريل ٢٠٢٥',
+                    category: 'التارو',
+                    likes: 18,
+                    content: 'محتوى مقال رموز التارو وتفسيراتها...'
+                },
+                '3': {
+                    title: 'الروحانية في الحياة اليومية',
+                    date: '٥ أبريل ٢٠٢٥',
+                    category: 'الروحانية',
+                    likes: 30,
+                    content: 'محتوى مقال الروحانية في الحياة اليومية...'
+                }
+            };
+            
+            // Load post data
+            const post = blogPosts[postId];
+            if (post) {
+                document.getElementById('post-title').textContent = post.title;
+                document.getElementById('post-date').textContent = post.date;
+                document.getElementById('post-category').textContent = post.category;
+                document.getElementById('post-content').innerHTML = marked.parse(post.content);
+                document.getElementById('like-count').textContent = post.likes;
+                document.title = `${post.title} - Premium Tarot`;
+            }
+            
+            // Like button functionality
+            const likeButton = document.getElementById('like-button');
+            let liked = false;
+            
+            likeButton.addEventListener('click', function() {
+                const likeIcon = this.querySelector('i');
+                const likeCount = parseInt(document.getElementById('like-count').textContent);
+                
+                if (!liked) {
+                    // Like the post
+                    likeIcon.classList.remove('far');
+                    likeIcon.classList.add('fas');
+                    document.getElementById('like-count').textContent = likeCount + 1;
+                    liked = true;
+                } else {
+                    // Unlike the post
+                    likeIcon.classList.remove('fas');
+                    likeIcon.classList.add('far');
+                    document.getElementById('like-count').textContent = likeCount - 1;
+                    liked = false;
+                }
+            });
+            
+            // Share button functionality
+            const shareButton = document.getElementById('share-button');
+            
+            shareButton.addEventListener('click', function() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: document.getElementById('post-title').textContent,
+                        url: window.location.href
+                    })
+                    .catch(console.error);
+                } else {
+                    // Fallback for browsers that don't support Web Share API
+                    prompt('انسخ الرابط لمشاركة المقال:', window.location.href);
+                }
+            });
+            
+            // Comment form functionality
+            const commentForm = document.getElementById('comment-form');
+            const commentsList = document.getElementById('comments-list');
+            let comments = [];
+            
+            commentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('commenter-name').value;
+                const text = document.getElementById('comment-text').value;
+                const date = new Date().toLocaleDateString('ar-EG');
+                
+                // Add comment to array
+                comments.push({ name, text, date });
+                
+                // Update comment count
+                document.getElementById('comment-count').textContent = comments.length;
+                
+                // Clear form
+                commentForm.reset();
+                
+                // Remove no comments message if it exists
+                const noCommentsMessage = document.querySelector('.no-comments-message');
+                if (noCommentsMessage) {
+                    noCommentsMessage.remove();
+                }
+                
+                // Add comment to list
+                const commentElement = document.createElement('div');
+                commentElement.className = 'comment';
+                commentElement.innerHTML = `
+                    <div class="comment-header">
+                        <h5 class="commenter-name">${name}</h5>
+                        <span class="comment-date">${date}</span>
+                    </div>
+                    <div class="comment-body">
+                        <p>${text}</p>
+                    </div>
+                `;
+                
+                commentsList.appendChild(commentElement);
+            });
+        });
+    </script>
+</body>
+</html>

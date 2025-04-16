@@ -1,0 +1,255 @@
+.tarot-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.tarot-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  transition: transform .8s;
+  position: relative;
+}
+
+.tarot-card:hover .tarot-card-inner {
+  transform: rotateY(180deg);
+}
+
+.tarot-card-front, .tarot-card-back {
+  backface-visibility: hidden;
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.tarot-card-front {
+  background-color: var(--light-gray);
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.tarot-card-back {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  display: flex;
+  transform: rotateY(180deg);
+}
+
+.tarot-card-back p {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.decorative-divider {
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  display: flex;
+}
+
+.decorative-line {
+  background-color: var(--medium-gray);
+  flex-grow: 1;
+  height: 1px;
+}
+
+.decorative-symbol {
+  color: var(--primary-color);
+  margin: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.hero-overlay {
+  z-index: 1;
+  background: linear-gradient(135deg, #9900000d 0%, #9900001a 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-outline {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: #0000;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.product-badge {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  z-index: 10;
+  border-radius: 50px;
+  padding: .3rem .8rem;
+  font-size: .8rem;
+  font-weight: 500;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.fade-in {
+  animation: 1s ease-in fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: .8s ease-out slideUp;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonial-card {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.testimonial-card:before {
+  content: "\"";
+  color: #9900001a;
+  font-size: 4rem;
+  font-family: var(--font-primary);
+  line-height: 1;
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.testimonial-content {
+  z-index: 1;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  position: relative;
+}
+
+.testimonial-author {
+  align-items: center;
+  display: flex;
+}
+
+.testimonial-author-image {
+  background-color: var(--light-gray);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.testimonial-author-name {
+  margin-bottom: .2rem;
+  font-weight: 600;
+}
+
+.testimonial-author-title {
+  color: var(--dark-gray);
+  font-size: .9rem;
+}
+
+.newsletter-section {
+  background-color: var(--light-gray);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.newsletter-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-input-group {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.newsletter-input {
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-family: var(--font-secondary);
+  flex-grow: 1;
+  padding: .8rem 1.2rem;
+}
+
+.newsletter-button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  border: none;
+  padding: 0 1.5rem;
+}
+
+.newsletter-button:hover {
+  background-color: maroon;
+}
+
+[dir="rtl"] .testimonial-card:before {
+  left: auto;
+  right: 1.5rem;
+}
+
+[dir="rtl"] .testimonial-author-image {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .product-badge {
+  left: 1rem;
+  right: auto;
+}
+
+[dir="rtl"] .newsletter-input {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+[dir="rtl"] .newsletter-button {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+/*# sourceMappingURL=premium-tarot.2d10bdcb.css.map */

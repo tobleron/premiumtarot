@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الشراء - Premium Tarot</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/theme-elements.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="إتمام الشراء من بريميوم تارو">
+    <meta name="keywords" content="tarot, premium, checkout, تارو, بريميوم, إتمام الشراء">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="btn btn-sm" id="lang-switch" data-current-lang="ar">English</button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/images/logo/logo.svg" alt="Premium Tarot" width="180">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="main-nav">
+                        <ul class="nav-links">
+                            <li><a href="../index.html" class="nav-link" data-lang-key="home">الرئيسية</a></li>
+                            <li><a href="products.html" class="nav-link" data-lang-key="products">المنتجات</a></li>
+                            <li><a href="offers.html" class="nav-link" data-lang-key="offers">العروض</a></li>
+                            <li><a href="blog.html" class="nav-link" data-lang-key="blog">المدونة</a></li>
+                            <li><a href="contact.html" class="nav-link" data-lang-key="contact">اتصل بنا</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1 class="section-title" data-lang-key="checkout">إتمام الشراء</h1>
+        </div>
+    </section>
+
+    <!-- Checkout Process -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="row">
+                <!-- Checkout Form -->
+                <div class="col-lg-8">
+                    <div class="checkout-form-container">
+                        <h2>معلومات الشحن</h2>
+                        <form id="checkout-form">
+                            <div class="mb-3">
+                                <label for="recipient-name" class="form-label">الاسم الكامل للمستلم</label>
+                                <input type="text" class="form-control" id="recipient-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="whatsapp-number" class="form-label">رقم WhatsApp</label>
+                                <input type="text" class="form-control" id="whatsapp-number" required>
+                                <div class="form-text">سيتم التواصل معك عبر هذا الرقم لتأكيد الطلب وترتيب الدفع</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">البريد الإلكتروني (اختياري)</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="building-number" class="form-label">رقم المبنى</label>
+                                <input type="text" class="form-control" id="building-number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="street-name" class="form-label">اسم الشارع</label>
+                                <input type="text" class="form-control" id="street-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="region-district" class="form-label">المنطقة/الحي</label>
+                                <input type="text" class="form-control" id="region-district" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="city" class="form-label">المدينة</label>
+                                <input type="text" class="form-control" id="city" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="country" class="form-label">الدولة</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="Egypt" selected>مصر</option>
+                                    <option value="Saudi Arabia">المملكة العربية السعودية</option>
+                                    <option value="UAE">الإمارات العربية المتحدة</option>
+                                    <option value="Kuwait">الكويت</option>
+                                    <option value="Qatar">قطر</option>
+                                    <option value="Bahrain">البحرين</option>
+                                    <option value="Oman">عمان</option>
+                                    <option value="Jordan">الأردن</option>
+                                    <option value="Lebanon">لبنان</option>
+                                    <option value="Other">دولة أخرى</option>
+                                </select>
+                                <div id="international-shipping-notice" class="form-text" style="display: none;">
+                                    للشحن الدولي، سيتم التواصل معك عبر WhatsApp لتحديد تكلفة الشحن.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="notes" class="form-label">ملاحظات إضافية (اختياري)</label>
+                                <textarea class="form-control" id="notes" rows="3"></textarea>
+                            </div>
+                            
+                            <h2 class="mt-4">طريقة الدفع</h2>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment-method" id="payment-whatsapp" value="whatsapp" checked>
+                                    <label class="form-check-label" for="payment-whatsapp">
+                                        الدفع عبر WhatsApp (تحويل مباشر)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment-method" id="payment-cod" value="cod">
+                                    <label class="form-check-label" for="payment-cod">
+                                        الدفع عند الاستلام (متاح فقط داخل مصر)
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg mt-4">تأكيد الطلب</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="order-summary">
+                        <h2>ملخص الطلب</h2>
+                        <div class="order-items" id="order-items">
+                            <!-- Order items will be dynamically added here -->
+                            <p class="empty-cart-message">سلة التسوق فارغة</p>
+                        </div>
+                        <div class="order-totals">
+                            <div class="subtotal">
+                                <span>المجموع الفرعي:</span>
+                                <span id="subtotal-amount">٠ ج.م</span>
+                            </div>
+                            <div class="shipping">
+                                <span>الشحن:</span>
+                                <span id="shipping-amount">مجاني</span>
+                            </div>
+                            <div class="total">
+                                <span>الإجمالي:</span>
+                                <span id="total-amount">٠ ج.م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verification Section -->
+    <section class="verification-section" style="display: none;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="verification-container">
+                        <h2>تأكيد رقم WhatsApp</h2>
+                        <p>لقد أرسلنا رمز تحقق إلى رقم WhatsApp الخاص بك. يرجى إدخال الرمز أدناه للمتابعة.</p>
+                        
+                        <form id="verification-form">
+                            <div class="mb-3">
+                                <label for="verification-code" class="form-label">رمز التحقق</label>
+                                <input type="text" class="form-control" id="verification-code" required>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-outline-secondary" id="back-to-checkout-btn">رجوع</button>
+                                <button type="button" class="btn btn-link" id="resend-code-btn">إعادة إرسال الرمز</button>
+                                <button type="submit" class="btn btn-primary">تأكيد</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal fade" id="orderConfirmationModal" tabindex="-1" aria-labelledby="orderConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderConfirmationModalLabel">تم استلام طلبك</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>شكرًا لطلبك من بريميوم تارو!</p>
+                    <p>تم إرسال تفاصيل طلبك إلى WhatsApp. سنتواصل معك قريبًا لتأكيد الطلب وترتيب الدفع.</p>
+                    <p>رقم الطلب: <span id="order-number"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">حسنًا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 data-lang-key="about-us">عن بريميوم تارو</h3>
+                    <p data-lang-key="about-description">نقدم منتجات تارو عالية الجودة وكتب روحانية لمساعدتك في رحلتك الروحانية.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="quick-links">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" data-lang-key="home">الرئيسية</a></li>
+                        <li><a href="products.html" data-lang-key="products">المنتجات</a></li>
+                        <li><a href="blog.html" data-lang-key="blog">المدونة</a></li>
+                        <li><a href="contact.html" data-lang-key="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 data-lang-key="contact-us">اتصل بنا</h3>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">WhatsApp</a></p>
+                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/premiumtarot" target="_blank">Facebook</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Premium Tarot. <span data-lang-key="all-rights-reserved">جميع الحقوق محفوظة</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/marked/marked.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/interactive.js"></script>
+    <script src="../assets/js/checkout-verification.js"></script>
+</body>
+</html>
